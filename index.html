@@ -15,7 +15,9 @@
         <input v-model="input" type="text" name="" value="" placeholder="nuovo To Do">
         <button @click="printodo" type="button" name="button">Aggiungi</button>
         <ul>
-          <li v-for="(item, i) in array">{{input}}</li>
+          <li v-for="(item, i) in array">
+            {{array[i]}}<i @click="deletetodo" class="fas fa-trash-alt"></i>
+          </li>
         </ul>
       </form>
     </div>

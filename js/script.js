@@ -11,6 +11,14 @@ var app = new Vue ({
     printodo: function () {
       //al click del bottone pusho l'input nell'array
       this.array.push(this.input);
+      console.log(this.input);
+    },
+    deletetodo: function (n) {
+      //al click del bottone pusho l'input nell'array
+      let index = this.array.indexOf(n);
+      if (index > -1) {
+        this.array.splice(index, 1);
+      }
     }
   }
 })
