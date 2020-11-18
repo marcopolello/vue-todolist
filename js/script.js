@@ -13,12 +13,9 @@ var app = new Vue ({
       this.array.push(this.input);
       console.log(this.input);
     },
-    deletetodo: function (n) {
-      //al click del bottone pusho l'input nell'array
-      let index = this.array.indexOf(n);
-      if (index > -1) {
-        this.array.splice(index, 1);
-      }
+    deletetodo: function (i) {
+      //al click dell'icona mi cancella il list item
+      this.array.splice(i, 1);
     }
   }
 })
