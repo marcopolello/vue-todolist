@@ -3,3 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* primo elemento nascosto perché mi stampa array con obj */
+ul > li:first-child{
+  display: none;
+}
