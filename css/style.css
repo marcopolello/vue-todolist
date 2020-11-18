@@ -2,8 +2,47 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Pacifico', cursive;
 }
-/* primo elemento nascosto perché mi stampa array con obj */
-ul > li:first-child{
-  display: none;
+nav{
+  margin: 10px 300px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3073C3;
+}
+#logo{
+  margin: 10px;
+  width: 200px;
+  height: auto;
+}
+h1{
+  font-size: 40px;
+}
+/* sezione app */
+#app{
+  background-color: #41B883;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 300px;
+  padding: 30px;
+}
+button, input{
+  padding: 5px;
+  border-radius: 20px;
+  opacity: 0.5;
+  background-color: yellow;
+}
+button:hover{
+  opacity: 1.0;
+}
+input:hover{
+  opacity: 1.0;
+}
+ul{
+  margin: 20px 50px 0;
+}
+li i{
+  margin-left: 3px;
 }

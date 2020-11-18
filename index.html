@@ -7,16 +7,23 @@
           integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
           crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   </head>
   <body>
-    <header>
 
-    </header>
+    <nav>
+      <a href="#"><img id="logo" src="img/logo.png" alt=""></a>
+      <h1>Che Programmi Hai oggi?</h1>
+    </nav>
+
+
+    <!-- applicazione  -->
     <div id="app">
       <form class="" action="index.html" method="post">
-        <input v-model="input" type="text" name="" value="" placeholder="nuovo To Do">
-        <button @click="printodo" type="button" name="button">Aggiungi</button>
+        <span style="margin-right:10px;">Devo Fare questo:</span>
+        <input v-model="todo" type="text" name="" value="" placeholder="nuovo To Do">
+        <button @click="printodo" type="button" name="button">Aggiungi Task</button>
         <ul>
           <li v-for="(item, i) in toDoList">
             {{toDoList[i]}}
