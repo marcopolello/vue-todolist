@@ -20,14 +20,14 @@
 
     <!-- applicazione  -->
     <div id="app">
-      <form class="" action="index.html" method="post">
+      <form>
         <span style="margin-right:10px;">Devo Fare questo:</span>
-        <input v-model="todo" type="text" name="" value="" placeholder="nuovo To Do">
+        <input v-model="todo" v-on:keyup.enter="printodo" type="text" placeholder="nuovo To Do">
         <button @click="printodo" type="button" name="button">Aggiungi Task</button>
         <ul>
           <li v-for="(item, i) in toDoList">
             {{toDoList[i]}}
-            <i @click="editodo(i)" class="fas fa-edit"></i>
+            <i @click="" class="fas fa-edit"></i>
             <i @click="deletetodo(i)" class="fas fa-trash-alt"></i>
           </li>
         </ul>

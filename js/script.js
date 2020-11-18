@@ -21,9 +21,6 @@ var app = new Vue ({
     deletetodo: function (i) {
       //al click dell'icona mi cancella il list item
       this.toDoList.splice(i, 1);
-    },
-    editodo: function(i) {
-      
     }
   }
 })
