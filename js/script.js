@@ -11,7 +11,8 @@ var app = new Vue ({
     printodo: function () {
       //al click del bottone pusho l'input nell'array
       this.array.push(this.input);
-      // console.log(this.input);
+      console.log(this.input);
+      console.log(this.array);
       this.input = ''; //resetto il mio input
     },
     deletetodo: function (i) {

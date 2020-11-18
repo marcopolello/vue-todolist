@@ -11,7 +11,7 @@
   </head>
   <body>
     <header>
-      
+
     </header>
     <div id="app">
       <form class="" action="index.html" method="post">
@@ -19,7 +19,8 @@
         <button @click="printodo" type="button" name="button">Aggiungi</button>
         <ul>
           <li v-for="(item, i) in array">
-            {{array[i]}}<i @click="deletetodo" class="fas fa-trash-alt"></i>
+            {{array[i]}}
+            <i @click="deletetodo(i)" class="fas fa-trash-alt"></i>
           </li>
         </ul>
       </form>
@@ -27,3 +28,6 @@
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
+
+
+<!-- <i @click="" class="fas fa-edit"></i> -->
