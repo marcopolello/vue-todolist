@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BONUS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- libreria lodash per manipolazione array-->
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+  </head>
+  <body>
+
+    <nav>
+      <a href="#"><img id="logo" src="img/logo.png" alt=""></a>
+      <h1>Che Programmi Hai oggi?</h1>
+    </nav>
+
+
+    <div id="todoApp">
+      <h3> {{message}} </h3>
+      <form name="todo-form" method="post" action="" v-on:submit.prevent="addTask">
+        <input name="add-todo" type="text" v-model="todoInput" v-bind:class="{error: hasError}"/>
+
+        <button type="submit">Aggiungi Task</button>
+      </form>
+
+      <div class="todo-lists" v-if="lists.length">
+        <h3>My Todo Tasks:</h3>
+        <ul>
+          <li v-for="list in filterLists" :key="list.id">
+            <input type="checkbox" v-on:change="completeTask(list)" v-bind:checked="list.isComplete"/>
+            <span class="title"
+            contenteditable="true"
+            v-on:keydown.enter="updateTask($event, list)" v-on:blur="updateTask($event, list)" v-bind:class="{completed: list.isComplete}">{{list.title}}</span>
+
+            <!-- <i @click="updateTask($event, list)" class="fas fa-edit"></i> -->
+            <i @click="deleteTask(list)" class="remove fas fa-trash-alt"></i>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>

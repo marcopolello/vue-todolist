@@ -25,7 +25,7 @@
         <input v-model="todo" v-on:keyup.enter="printodo" type="text" placeholder="nuovo To Do">
         <button @click="printodo" type="button" name="button">Aggiungi Task</button>
         <ul>
-          <li v-for="(item, i) in toDoList">
+          <li contenteditable="true" v-for="(item, i) in toDoList">
             {{toDoList[i]}}
             <i @click="" class="fas fa-edit"></i>
             <i @click="deletetodo(i)" class="fas fa-trash-alt"></i>
