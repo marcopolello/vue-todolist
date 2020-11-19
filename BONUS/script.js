@@ -7,6 +7,7 @@ var todoApp = new Vue({
     hasError: false
   },
   computed: {
+    // https://lodash.com/docs/4.17.15#orderBy
     filterLists: function(){
       return _.orderBy(this.lists, ['isComplete', false])
     }
@@ -32,9 +33,10 @@ var todoApp = new Vue({
       this.todoInput = '';
     },
     // delete del todo
-    deleteTask: function (list) {
-      //al click dell'icona mi cancella il list item
-      var index = _.findIndex(this.lists, list)
+    deleteTask: function (item) { //<--item è il list nella lista
+
+      //al click dell'icona mi cancella il lists item
+      var index = _.findIndex(this.lists, item)
       this.lists.splice(index, 1);
     },
     // edit del toDo già printato
