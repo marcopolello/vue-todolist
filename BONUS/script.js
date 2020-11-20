@@ -19,7 +19,6 @@ var todoApp = new Vue({
         this.hasError = true;
         return;
       }
-
       this.hasError = false;
 
       // pusho obj
@@ -32,6 +31,7 @@ var todoApp = new Vue({
       // reset input field.
       this.todoInput = '';
     },
+
     // delete del todo
     deleteTask: function (item) { //<--item è il list nella lista
 
@@ -39,6 +39,7 @@ var todoApp = new Vue({
       var index = _.findIndex(this.lists, item)
       this.lists.splice(index, 1);
     },
+
     // edit del toDo già printato
     updateTask: function(e, list){
       e.preventDefault();
